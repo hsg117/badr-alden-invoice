@@ -430,7 +430,7 @@ function InvoiceView() {
                   <span className="inv-contact-icon">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16,8 20,8 23,11 23,16 16,16 16,8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
                   </span>
-                  <span>خدمة التوصيل: <span dir="ltr" className="contact-nums">01001706283</span></span>
+                  <span>خدمة التوصيل: <span dir="ltr" className="contact-nums">01001706283 — 01117555759</span></span>
                 </div>
                 <div className="inv-contact-item">
                   <span className="inv-contact-icon">
