@@ -1,0 +1,107 @@
+import type { Invoice } from '../types/invoice'
+
+export const invoices: Invoice[] = [
+  {
+    id: 'INV-2025-001',
+    invoiceNumber: 'INV-2025-001',
+    date: '2025-05-15',
+    time: '10:30',
+    customerName: 'أحمد محمد',
+    customerPhone: '01117555759',
+    customerAddress: 'التجمع الخامس، القاهرة الجديدة',
+    items: [
+      { id: 1, description: 'قهوة عربية فاخرة - 500 جرام', quantity: 2, price: 150.00, total: 300.00 },
+      { id: 2, description: 'بن إثيوبي محمص - 250 جرام', quantity: 1, price: 250.00, total: 250.00 },
+      { id: 3, description: 'كيس هدية مزخرف', quantity: 1, price: 100.00, total: 100.00 },
+    ],
+    subtotal: 650.00,
+    tax: 32.50,
+    taxRate: 5,
+    discount: 0,
+    total: 682.50,
+    notes: 'شكراً لتعاملكم مع محمصة بدر الدين',
+    status: 'paid',
+    employeeName: 'محمد إبراهيم',
+    orderType: 'instore',
+    paymentMethod: 'كاش',
+  },
+  {
+    id: 'INV-2025-002',
+    invoiceNumber: 'INV-2025-002',
+    date: '2025-05-20',
+    time: '14:15',
+    customerName: 'سارة خالد',
+    customerPhone: '01001706283',
+    customerAddress: 'اللوتس الشمالية، التجمع الأول',
+    items: [
+      { id: 1, description: 'كولومبيا سوبريمو - 500 جرام', quantity: 1, price: 450.00, total: 450.00 },
+      { id: 2, description: 'بن برازيلي - 500 جرام', quantity: 2, price: 120.00, total: 240.00 },
+    ],
+    subtotal: 690.00,
+    tax: 34.50,
+    taxRate: 5,
+    discount: 50.00,
+    total: 674.50,
+    status: 'paid',
+    employeeName: 'أحمد علي',
+    orderType: 'delivery',
+    deliveryPersonName: 'كريم محمود',
+    deliveryAddress: 'اللوتس الشمالية، شارع 9، عمارة 5',
+    paymentMethod: 'فيزا',
+  },
+  {
+    id: 'INV-2025-003',
+    invoiceNumber: 'INV-2025-003',
+    date: '2025-06-01',
+    time: '09:45',
+    customerName: 'محمد علي',
+    customerPhone: '01555555555',
+    customerAddress: 'المعادي، القاهرة',
+    items: [
+      { id: 1, description: 'تركيش سبيشال - 250 جرام', quantity: 1, price: 350.00, total: 350.00 },
+      { id: 2, description: 'إسبريسو بليند - 500 جرام', quantity: 1, price: 380.00, total: 380.00 },
+      { id: 3, description: 'كابوتشينو ميكس', quantity: 2, price: 80.00, total: 160.00 },
+    ],
+    subtotal: 890.00,
+    tax: 44.50,
+    taxRate: 5,
+    discount: 0,
+    total: 934.50,
+    status: 'paid',
+    employeeName: 'سامي حسن',
+    orderType: 'online',
+    paymentMethod: 'إنستاباي',
+  },
+  {
+    id: 'INV-2025-004',
+    invoiceNumber: 'INV-2025-004',
+    date: '2025-06-05',
+    time: '16:30',
+    customerName: 'نورة عبدالله',
+    customerPhone: '01588888888',
+    items: [
+      { id: 1, description: 'هاواي ميكس - 500 جرام', quantity: 1, price: 800.00, total: 800.00 },
+      { id: 2, description: 'كينيا AA - 250 جرام', quantity: 1, price: 420.00, total: 420.00 },
+    ],
+    subtotal: 1220.00,
+    tax: 61.00,
+    taxRate: 5,
+    discount: 100.00,
+    total: 1181.00,
+    notes: 'طلب خاص - طحن ناعم',
+    status: 'pending',
+    employeeName: 'يوسف طارق',
+    orderType: 'delivery',
+    deliveryPersonName: 'عمر السيد',
+    deliveryAddress: 'مدينة نصر، شارع عباس العقاد، برج 12',
+    paymentMethod: 'كاش عند الاستلام',
+  },
+]
+
+export function getInvoiceById(id: string): Invoice | undefined {
+  return invoices.find((inv) => inv.id === id || inv.invoiceNumber === id)
+}
+
+export function getAllInvoices(): Invoice[] {
+  return invoices
+}
